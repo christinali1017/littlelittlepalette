@@ -1,0 +1,236 @@
+body{
+	background-color: rgba(112, 146 , 190, 0.1);
+	
+}
+#controlArea{
+	border: solid;
+	border-width: 3px;
+	border-color: rgba(112, 146 , 190, 0.2);
+	width: 180px;
+	height: 550px;
+	margin-top: 20px;
+	margin-left: 40px;
+	position: absolute;
+	
+	background: -webkit-linear-gradient(top,#F0F4F8,#CECEFF);
+	
+}
+#shape{
+	margin-top: 5px;
+	margin-left: 6px;
+}
+#shape img{
+	width: 28px;
+	height: 28px;
+	background-repeat: no-repeat;
+}
+.chosen{
+	/* border: 2px dashed !important; 
+	border-color: #5151A2 !important; */
+	outline: 2px dashed #BE77FF !important;
+	outline-offset: 1px;
+}
+/*去处颜色和线条的父节点 div的outline*/
+#color{
+	outline: none !important;
+	margin-left: 2px;
+}
+#lineWeight{
+	outline: none !important;
+}
+
+#pencil{
+	width:24px !important;
+	height:24px !important;
+}
+#rubber{
+	width: 28px !important;
+	height: 28px !important;
+}
+
+#lineWeight{
+	margin-top:10px;
+}
+#lineWeight img{
+	width: 175px;
+	padding: 4px 2px;
+}
+
+#funcBtn{
+	margin-left: 6px;
+}
+
+#funcBtn img{
+	margin-right:2px;
+	width: 24px;
+	height: 24px;
+	border: none;
+}
+canvas{
+	margin-left: 240px;
+	margin-top: 20px;
+	position: absolute;
+	border:3px solid;
+	border-color: rgba(112, 146 , 190, 0.4);
+	z-index: 1;
+}
+#canvasTemp{
+	z-index: 2;
+}
+#imgContent{
+	float:left;
+	background-color: #ffffff;
+}
+
+img{
+	cursor: pointer;
+}
+button{
+	width: 22px;
+	cursor: pointer;
+}
+#yellowBtn{
+	background-color: yellow;
+}
+#redBtn{
+	background-color: red;
+}
+#blueBtn{
+	background-color: blue;
+}
+#greenBtn{
+	background-color: green;
+}
+#whiteBtn{
+	background-color: white;
+}
+#blackBtn{
+	background-color:black;
+}
+
+#greyBtn1{
+	background-color: #272727;
+}
+#greyBtn2{
+	background-color: #3C3C3C;
+}
+#greyBtn3{
+	background-color: #5B5B5B;
+}
+
+#greyBtn4{
+	background-color: #7B7B7B;
+}
+#greyBtn5{
+	background-color: #9D9D9D;
+}
+#greyBtn6{
+	background-color: #d0d0d0;
+}
+
+
+#redBtn1{
+	background-color: #2F0000;
+}
+#redBtn2{
+	background-color: #600000;
+}
+#redBtn3{
+	background-color: #930000;
+}
+
+#redBtn4{
+	background-color: #CE0000;
+}
+#redBtn5{
+	background-color: #FF0000;
+}
+#redBtn6{
+	background-color: #FF5151;
+}
+
+
+
+#purpleBtn1{
+	background-color: #28004D;
+}
+#purpleBtn2{
+	background-color: #5B00AE;
+}
+#purpleBtn3{
+	background-color: #8600FF;
+}
+
+#purpleBtn4{
+	background-color: #9F35FF;
+}
+#purpleBtn5{
+	background-color: #BE77FF;
+}
+#purpleBtn6{
+	background-color: #DCB5FF;
+}
+
+
+#blueBtn1{
+	background-color: #000079;
+}
+#blueBtn2{
+	background-color: #0000C6;
+}
+#blueBtn3{
+	background-color: #2828FF;
+}
+
+#blueBtn4{
+	background-color: #6A6AFF;
+}
+#blueBtn5{
+	background-color: #AAAAFF;
+}
+#blueBtn6{
+	background-color: #CECEFF;
+}
+
+
+#greenBtn1{
+	background-color: #006000;
+}
+#greenBtn2{
+	background-color: #009100;
+}
+#greenBtn3{
+	background-color: #00BB00;
+}
+
+#greenBtn4{
+	background-color: #00EC00;
+}
+#greenBtn5{
+	background-color: #53FF53;
+}
+#greenBtn6{
+	background-color: #93FF93;
+}
+
+
+
+#yellowBtn1{
+	background-color: #5B4B00;
+}
+#yellowBtn2{
+	background-color: #977C00;
+}
+#yellowBtn3{
+	background-color: #C6A300;
+}
+
+#yellowBtn4{
+	background-color: #FFDC35;
+}
+#yellowBtn5{
+	background-color: #FFE66F;
+}
+#yellowBtn6{
+	background-color: #FFF0AC;
+}

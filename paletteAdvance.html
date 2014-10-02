@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>palette</title>
+<link rel="stylesheet" href="./css/paletteAdvance.css">
+</head>
+<body>
+	<div id="controlArea">
+		<div id="shape">
+			<img id="pencil" src="./images/pencil.png" title="铅笔" onclick="drawPicture('pencil', this);">
+			<img id="line" src="./images/line.png" title="直线"  onclick="drawPicture('line', this);">
+			<img id="rec" src="./images/rec.png" title="矩形"  onclick="drawPicture('rec', this);">
+			<img id="roundRec" src="./images/roundRec.png" title="圆角矩形"  onclick="drawPicture('roundRec', this);">
+			<img id="circle" src="./images/circle.png"title="圆形"  onclick="drawPicture('circle', this);">
+		</div>
+		
+		<br/>
+		
+		<div id="funcBtn">
+			<img id="rubber" src="./images/rubber.png" title="橡皮擦" onclick="drawPicture('rubber', this);">
+			<img id="undoImage" src="./images/undo.png" title="撤销" onclick="undo();">
+			<img id="redoImage" src="./images/redo.png" title="重做" onclick="redo();">
+			<img src="./images/cancel.png" title="清屏" onclick="clearScreen();">
+			<img src="./images/save.png" title="保存" onclick="saveImageHistory();">
+		</div>
+		
+		<br/>
+		
+		<div id= "color">
+			<button id="yellowBtn" onclick="lineColor='yellow';">&nbsp;</button>
+			<button id="redBtn" onclick="lineColor='red';">&nbsp;</button>
+			<button id="blueBtn" onclick="lineColor='blue';">&nbsp;</button>
+			<button id="greenBtn" onclick="lineColor='green';">&nbsp;</button>
+			<button id="whiteBtn" onclick="lineColor='white';">&nbsp;</button>
+			<button id="blackBtn" onclick="lineColor='black';">&nbsp;</button>
+			<br>
+			<button id="greyBtn1" onclick="lineColor='#000000';">&nbsp;</button>
+			<button id="greyBtn2" onclick="lineColor='#272727';">&nbsp;</button>
+			<button id="greyBtn3" onclick="lineColor='#3C3C3C';">&nbsp;</button>
+			<button id="greyBtn4" onclick="lineColor='#7B7B7B';">&nbsp;</button>
+			<button id="greyBtn5" onclick="lineColor='#9D9D9D';">&nbsp;</button>
+			<button id="greyBtn6" onclick="lineColor='#d0d0d0';">&nbsp;</button>
+			<br>
+			<button id="redBtn1" onclick="lineColor='#2F0000';">&nbsp;</button>
+			<button id="redBtn2" onclick="lineColor='#600000';">&nbsp;</button>
+			<button id="redBtn3" onclick="lineColor='#930000';">&nbsp;</button>
+			<button id="redBtn4" onclick="lineColor='#CE0000';">&nbsp;</button>
+			<button id="redBtn5" onclick="lineColor='#FF0000';">&nbsp;</button>
+			<button id="redBtn6" onclick="lineColor='#FF5151';">&nbsp;</button>
+			<br>
+			<button id="purpleBtn1" onclick="lineColor='#28004D';">&nbsp;</button>
+			<button id="purpleBtn2" onclick="lineColor='#5B00AE';">&nbsp;</button>
+			<button id="purpleBtn3" onclick="lineColor='#8600FF';">&nbsp;</button>
+			<button id="purpleBtn4" onclick="lineColor='#9F35FF';">&nbsp;</button>
+			<button id="purpleBtn5" onclick="lineColor='#BE77FF';">&nbsp;</button>
+			<button id="purpleBtn6" onclick="lineColor='#DCB5FF';">&nbsp;</button>
+			<br>
+			<button id="blueBtn1" onclick="lineColor='#000079';">&nbsp;</button>
+			<button id="blueBtn2" onclick="lineColor='#0000C6';">&nbsp;</button>
+			<button id="blueBtn3" onclick="lineColor='#2828FF';">&nbsp;</button>
+			<button id="blueBtn4" onclick="lineColor='#6A6AFF';">&nbsp;</button>
+			<button id="blueBtn5" onclick="lineColor='#AAAAFF';">&nbsp;</button>
+			<button id="blueBtn6" onclick="lineColor='#CECEFF';">&nbsp;</button>
+			<br>
+			<button id="greenBtn1" onclick="lineColor='#006000';">&nbsp;</button>
+			<button id="greenBtn2" onclick="lineColor='#009100';">&nbsp;</button>
+			<button id="greenBtn3" onclick="lineColor='#00BB00';">&nbsp;</button>
+			<button id="greenBtn4" onclick="lineColor='#00EC00';">&nbsp;</button>
+			<button id="greenBtn5" onclick="lineColor='#53FF53';">&nbsp;</button>
+			<button id="greenBtn6" onclick="lineColor='#93FF93';">&nbsp;</button>
+			<br>
+			<button id="yellowBtn1" onclick="lineColor='#5B4B00';">&nbsp;</button>
+			<button id="yellowBtn2" onclick="lineColor='#977C00';">&nbsp;</button>
+			<button id="yellowBtn3" onclick="lineColor='#C6A300';">&nbsp;</button>
+			<button id="yellowBtn4" onclick="lineColor='#EAC100';">&nbsp;</button>
+			<button id="yellowBtn5" onclick="lineColor='#FFDC35';">&nbsp;</button>
+			<button id="yellowBtn6" onclick="lineColor='#FFE66F';">&nbsp;</button>
+			<br>
+		</div>
+		
+		<div id="lineWeight">
+			<br/>
+			<img id ="line1" src="./images/line1.png" title="1px" onclick="lineWeight=1;"><br>
+			<img id="line2" src="./images/line2.png" title="2px" onclick="lineWeight=2;"><br>
+			<img src="./images/line3.png" title="3px" onclick="lineWeight=3;"><br>
+			<img src="./images/line4.png" title="4px" onclick="lineWeight=4;"><br>
+			<img src="./images/line5.png" title="5px" onclick="lineWeight=5;"><br>
+			<img src="./images/line6.png" title="6px" onclick="lineWeight=6;"><br>
+			<img src="./images/line7.png" title="7px" onclick="lineWeight=7;"><br>
+			<img src="./images/line8.png" title="8px" onclick="lineWeight=8;"><br>
+		</div>
+	</div>
+	<div id="imgContent">
+		<canvas id="canvas" width="600" height="490">
+			浏览器不支持~
+		</canvas>
+		<!--此canvas用于暂存graph，绘制过程中需要清除context，因而需要缓存，否则更换形状时会出现问题 -->
+		<canvas id="canvasTemp"width="600" height="490" >&nbsp;</canvas>
+	</div>
+	
+	<script>
+    /*
+     * 总结：
+     * 1. 使用原生js时事件解绑中遇到问题，尝试了removeEventListener和最原始的将绑定事件置为null，但是没起作用，没找到解决方法因而使用了jQuery的unbind
+     * 
+     * 2. DOM中定义的id会再javasvript中以变量自动定义，因而一定注意js中与id同名的变量或者方法可能不起作用
+     * 
+     * 3. body为蓝色背景，因而想将canvas背景设置为白色，然后尝试将canvas设置背景，这种方式是不行的，只能使用fillRect方式为canvas填充背景，
+     *    此种方式为橡皮擦的擦除带来了问题，橡皮擦的擦除应该也使用fillRect方式而不能使用clearRect方式
+     */
+	</script>
+	<script src="./js/jquery1.9.1.js"></script>
+	<script src="./js/paletteAdvance.js"></script>
+	
+</body>
+</html>
