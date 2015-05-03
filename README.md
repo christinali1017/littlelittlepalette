@@ -1,7 +1,7 @@
 # palette
 A simple palette for drawing
 
-![Alt text](wishyouhappy.github.io/pictures/palette.png)
+![Palette](https://wishyouhappy.github.io/pictures/palette.png)
 
 See this two links for design detail:
 
